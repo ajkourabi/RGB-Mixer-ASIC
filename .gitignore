@@ -1,0 +1,6 @@
+# Ignore compiled output
+*
+!*.v
+!*.sv
+!*.vcd
+!*.gitignore
