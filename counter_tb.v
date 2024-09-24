@@ -37,11 +37,11 @@ module counter_tb;
         reset = 1;
 
         // Wait 100 ns for global reset to finish
-        #100;
+        #10;
         reset = 0;
 
         // Wait for a few clock cycles
-        #100;
+        #10;
 
         // Finish the simulation
         $finish;
