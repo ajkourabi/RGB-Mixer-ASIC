@@ -3,4 +3,5 @@
 !*.v
 !*.sv
 !*.vcd
+!*md
 !*.gitignore
