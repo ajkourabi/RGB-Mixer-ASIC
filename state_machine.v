@@ -28,25 +28,90 @@ module traffic_light_controller (
     // State machine logic (to be implemented)
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            // Reset logic
+            current_state <= MAIN_GREEN_SIDE_RED;
         end else begin
-            // State transition logic
+            current_state <= next_state;
         end
     end
 
     // Output logic (to be implemented)
     always @(*) begin
         // Set main_lights and side_lights based on current_state
+        case(current_state)
+            MAIN_GREEN_SIDE_RED : begin
+                main_lights = 3'b001;
+                side_lights = 3'b100;
+            end
+            MAIN_YELLOW_SIDE_RED : begin
+                main_lights = 3'b010;
+                side_lights = 3'b100;
+            end 
+            MAIN_RED_SIDE_GREEN : begin 
+                main_lights = 3'b100;
+                side_lights = 3'b001;
+            end 
+            MAIN_RED_SIDE_YELLOW : begin
+                main_lights = 3'b100;
+                side_lights = 3'b010;
+            end
+            default: begin
+                main_lights = 3'b100;
+                side_lights = 3'b100;
+            end  
+
+        endcase 
     end
 
-    // Next state logic (to be implemented)
     always @(*) begin
-        // Determine next_state based on current_state and timer
+        case (current_state)
+            MAIN_GREEN_SIDE_RED: begin 
+                if (timer == 0)
+                    next_state = MAIN_YELLOW_SIDE_RED;
+                else
+                    next_state = MAIN_GREEN_SIDE_RED;
+            end
+            MAIN_YELLOW_SIDE_RED: begin 
+                if (timer == 0)
+                    next_state = MAIN_RED_SIDE_GREEN;
+                else
+                    next_state = MAIN_YELLOW_SIDE_RED;
+            end 
+            MAIN_RED_SIDE_GREEN: begin 
+                if (timer == 0)
+                    next_state = MAIN_RED_SIDE_YELLOW;
+                else
+                    next_state = MAIN_RED_SIDE_GREEN;
+            end 
+            MAIN_RED_SIDE_YELLOW: begin 
+                if (timer == 0)
+                    next_state = MAIN_GREEN_SIDE_RED;
+                else
+                    next_state = MAIN_RED_SIDE_YELLOW;
+            end
+            default: next_state = MAIN_GREEN_SIDE_RED;
+        endcase 
     end
-
-    // Timer logic (to be implemented)
+    
+    
     always @(posedge clk or posedge reset) begin
-        // Implement timer countdown and reset
+        if (reset) begin 
+            timer <= MAIN_GREEN_TIME;
+        end 
+        else begin 
+            if (timer == 0) begin
+                case (next_state)  
+                    MAIN_GREEN_SIDE_RED:  timer <= MAIN_GREEN_TIME;
+                    MAIN_YELLOW_SIDE_RED: timer <= YELLOW_TIME;
+                    MAIN_RED_SIDE_GREEN:  timer <= SIDE_GREEN_TIME;
+                    MAIN_RED_SIDE_YELLOW: timer <= YELLOW_TIME;
+                    default:              timer <= MAIN_GREEN_TIME;
+                endcase 
+            end 
+            else begin 
+                timer <= timer - 1;
+            end 
+        end 
     end
 
 endmodule
+
