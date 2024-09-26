@@ -47,5 +47,3 @@ assign overflow = (op == ADD && temp[8] != temp[7]) ||
                   (op == SUB && temp[8] != temp[7]);
 
 endmodule
-`timescale 1ns / 1ps
-
