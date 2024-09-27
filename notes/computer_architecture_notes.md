@@ -1,4 +1,3 @@
-Here's a formatted and expanded version of the information in markdown:
 
 # Computer Architecture: Von Neumann Model and Beyond
 
@@ -69,3 +68,66 @@ Computer architecture generally comprises three main elements:
 - Specifies the underlying implementation of the ISA
 - Determines how instructions are actually executed in hardware
 - Can vary between different processors implementing the same ISA
+
+# Microarchitecture and ISA Design Tradeoffs
+
+Microarchitecture specifies the underlying implementation for the execution itself, and how the ISA will be implemented. 
+
+There are concrete tradeoffs when picking an ISA and a microarchitecture design:
+
+## 1. RISC vs. CISC
+
+### RISC (Reduced Instruction Set Computing)
+- **Pros**: 
+  - Simpler hardware
+  - Easier to pipeline
+  - Potentially faster clock speeds
+- **Cons**: 
+  - May require more instructions to perform complex tasks
+
+### CISC (Complex Instruction Set Computing)
+- **Pros**: 
+  - Can perform complex operations in a single instruction
+  - Potentially more code-efficient
+- **Cons**: 
+  - More complex hardware
+  - Harder to pipeline efficiently
+
+## 2. Number of Registers
+
+- More registers → Higher performance
+- But: Can make hardware more complex and increase instruction encoding (e.g. more work for copiler)
+
+## 3. Specialized vs. General Instructions
+
+1. Specialized instructions:
+   - Can do a very limited set of things
+   - Better memory utilization and better packing of instructions 
+   - But, can make hardware more complex 
+
+2. Generalized instructions:
+   - Can do a lot of things
+   - May not be optimal for specific tasks
+
+> **Highlight:** This is especially relevant for something like TPUs. They will have a more specialized instruction set since the goal is for them to do one specific thing very well, and everything else can be handled by a separate chip.
+
+## 4. Instruction Level Parallelism
+
+- Allows for parallel computing
+- Can be harder to code
+- Increases power consumption
+
+
+# Systolic Arrays
+
+## Goals of an accelerator from [here](https://www.youtube.com/watch?v=XkgtANeDrm8)
+1. Simple, regular design 
+2. Ability to parallelize 
+3. Balance computation and I/O memory bandwidth 
+
+Systolic arrays replace a single element with an array of elements which do specific operations 
+> allows you to do a lot of computation from one piece of memory, decreases overall memory needs and bandwidth.  
+
+This architecture is special because you are not necessarily doing thigs linearly (each cell can have a weight to it) and can be multi-dimensional. 
+
+You can also store weights in each cell, and you can update them on the fly within each cell. 

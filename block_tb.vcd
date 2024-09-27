@@ -1,0 +1,140 @@
+$date
+	Fri Sep 27 16:29:45 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module block_tb $end
+$var wire 32 ! out_south [31:0] $end
+$var wire 32 " out_east [31:0] $end
+$var wire 32 # out [31:0] $end
+$var reg 1 $ clk $end
+$var reg 16 % north_input [15:0] $end
+$var reg 1 & rst $end
+$var reg 16 ' west_input [15:0] $end
+$scope module uut $end
+$var wire 1 $ clk $end
+$var wire 16 ( north_input [15:0] $end
+$var wire 1 & rst $end
+$var wire 16 ) west_input [15:0] $end
+$var reg 32 * out [31:0] $end
+$var reg 32 + out_east [31:0] $end
+$var reg 32 , out_south [31:0] $end
+$var reg 32 - product [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 -
+bx ,
+bx +
+b0 *
+b0 )
+b0 (
+b0 '
+1&
+b0 %
+0$
+b0 #
+bx "
+bx !
+$end
+#5000
+1$
+#10000
+0$
+#15000
+1$
+#20000
+0$
+0&
+#25000
+b0 "
+b0 +
+b0 !
+b0 ,
+1$
+#30000
+0$
+b100 '
+b100 )
+b10 %
+b10 (
+#35000
+b100 "
+b100 +
+b10 !
+b10 ,
+b1000 #
+b1000 *
+b1000 -
+1$
+#40000
+0$
+b11001000 '
+b11001000 )
+b1100100 %
+b1100100 (
+#45000
+b11001000 "
+b11001000 +
+b1100100 !
+b1100100 ,
+b100111000101000 #
+b100111000101000 *
+b100111000100000 -
+1$
+#50000
+0$
+b101 '
+b101 )
+b11 %
+b11 (
+#55000
+b101 "
+b101 +
+b11 !
+b11 ,
+b100111000110111 #
+b100111000110111 *
+b1111 -
+1$
+#60000
+0$
+b1010 '
+b1010 )
+b1010 %
+b1010 (
+#65000
+b0 -
+b0 #
+b0 *
+1$
+1&
+#70000
+0$
+0&
+#75000
+b1010 "
+b1010 +
+b1010 !
+b1010 ,
+b1100100 #
+b1100100 *
+b1100100 -
+1$
+#80000
+0$
+#85000
+b11001000 #
+b11001000 *
+1$
+#90000
+0$
