@@ -1,7 +1,8 @@
 # Ignore compiled output
 *
+!*/
 !*.v
 !*.sv
 !*.vcd
-!*md
-!*.gitignore
+!*.md
+!.gitignore
