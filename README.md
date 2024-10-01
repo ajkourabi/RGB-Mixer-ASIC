@@ -8,7 +8,7 @@ Because these cells are tightly coordinated and pipelines flow rhytmically, the 
 
 My code works for any arbitrary 3x3 matric multiplication. The result is outputted row by row for the user. It is done completely in verilog, from scratch. The test bench, which verifies and tests these results, is also in verilog. 
 
-You can see all the code for the poject [here](https://github.com/ajkourabi/learning_verilog/tree/main/systolic_array). There is one, `block.v`, which describes the basic behaviour of a single processing element, and the other code describes putting together the array. 
+There is one file, `block.v`, which describes the basic behaviour of a single processing element, and the other code describes putting together the array. 
 
 # Other projetcs
 
