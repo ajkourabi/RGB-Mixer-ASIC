@@ -16,18 +16,24 @@ module systolic_array (
     output reg done 
 );
     wire [15:0] out_south[8:0], out_east[8:0];
-    reg [2:0] counter;
+    reg [3:0] counter;
     reg [15:0] west_in[2:0], north_in[2:0];
 
 
-    genvar i;
-    generate
-        for (i = 0; i < 3; i = i + 1) begin : gen_blocks
-            block b0 (clk, rst, west_in[i], north_in[i], out_south[i*3], out_east[i*3], out[i*3]);
-            block b1 (clk, rst, out_east[i*3], out_south[i*3], out_south[i*3+1], out_east[i*3+1], out[i*3+1]);
-            block b2 (clk, rst, out_east[i*3+1], out_south[i*3+1], out_south[i*3+2], out_east[i*3+2], out[i*3+2]);
-        end
-    endgenerate
+    // First row
+    block b00 (clk, rst, west_in[0], north_in[0], out_south[0], out_east[0], out[0]);
+    block b01 (clk, rst, out_east[0], north_in[1], out_south[1], out_east[1], out[1]);
+    block b02 (clk, rst, out_east[1], north_in[2], out_south[2], out_east[2], out[2]);
+
+    // Second row
+    block b10 (clk, rst, west_in[1], out_south[0], out_south[3], out_east[3], out[3]);
+    block b11 (clk, rst, out_east[3], out_south[1], out_south[4], out_east[4], out[4]);
+    block b12 (clk, rst, out_east[4], out_south[2], out_south[5], out_east[5], out[5]);
+
+    // Third row
+    block b20 (clk, rst, west_in[2], out_south[3], out_south[6], out_east[6], out[6]);
+    block b21 (clk, rst, out_east[6], out_south[4], out_south[7], out_east[7], out[7]);
+    block b22 (clk, rst, out_east[7], out_south[5], out_south[8], out_east[8], out[8]);
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin 
@@ -37,24 +43,16 @@ module systolic_array (
             north_in[0] <= 0; north_in[1] <= 0; north_in[2] <= 0;
         end 
         else if (counter < 5) begin 
-            counter <= counter + 1 ;
 
             west_in[0] <= west_0[counter];
             west_in[1] <= west_1[counter];
             west_in[2] <= west_2[counter];
+
             north_in[0] <= north_0[counter];
             north_in[1] <= north_1[counter];
             north_in[2] <= north_2[counter];
-            
-            $display("Counter incremented: %0d", counter);
-            
-            
-            $display("Block 00: west_in=%0d, north_in=%0d, out=%0d, out_south=%0d, out_east=%0d", 
-                     west_in[0], north_in[0], out[0], out_south[0], out_east[0]);
-            $display("Block 10: west_in=%0d, north_in=%0d, out=%0d, out_south=%0d, out_east=%0d", 
-                     west_in[1], out_south[0], out[3], out_south[3], out_east[3]);
-            $display("Block 22: west_in=%0d, north_in=%0d, out=%0d, out_south=%0d, out_east=%0d", 
-                     out_east[7], out_south[7], out[8], out_south[8], out_east[8]);
+
+            counter <= counter + 1 ;
         end
         else if (counter == 5) begin
             counter <= counter + 1;

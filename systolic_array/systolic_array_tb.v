@@ -12,6 +12,9 @@ module systolic_array_tb();
     reg [4:0][15:0] north_2;
     wire [8:0][31:0] out;
     wire done;
+        // Add wire declarations for out_south and out_east
+    wire [15:0] out_south[8:0];
+    wire [15:0] out_east[8:0];
 
 systolic_array uut(
 
@@ -42,12 +45,12 @@ initial begin
     #10 rst = 0;  // De-assert reset after 10 time units
     west_0 = {16'd0, 16'd0, 16'd4, 16'd3, 16'd1};
     west_1 = {16'd0, 16'd9, 16'd8, 16'd5, 16'd0};
-    west_2 = {16'd5, 16'd4, 16'd7, 16'd0, 16'd0};
+    west_2 = {16'd3, 16'd1, 16'd1, 16'd0, 16'd0};
 
     north_0 = {16'd0, 16'd0, 16'd4, 16'd3, 16'd7};
-    north_1 = {16'd0, 16'd7, 16'd6, 16'd8, 16'd0};
+    north_1 = {16'd0, 16'd1, 16'd6, 16'd8, 16'd0};
     north_2 = {16'd3, 16'd7, 16'd2, 16'd0, 16'd0};
-    #1000;
+    #80;
     wait(done);
 
     $display("Systolic Array Output:");
@@ -55,7 +58,7 @@ initial begin
         $display("out[%0d] = %0d", i, out[i]);
     end
 
-    #100 $finish;  // End simulation
+    $finish;  // End simulation
 
 end 
 
@@ -63,6 +66,7 @@ end
 initial begin
     $dumpfile("systolic_sim.vcd");
     $dumpvars(0, systolic_array_tb);
+
 end
 
 endmodule
