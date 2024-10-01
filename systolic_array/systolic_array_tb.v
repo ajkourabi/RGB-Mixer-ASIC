@@ -66,7 +66,6 @@ end
 initial begin
     $dumpfile("systolic_sim.vcd");
     $dumpvars(0, systolic_array_tb);
-
 end
 
 endmodule
