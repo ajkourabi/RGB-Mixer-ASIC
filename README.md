@@ -6,7 +6,8 @@ A systolic array is a form of architecture in which nodes are tightly couples an
 
 Because these cells are tightly coordinated and pipelines flow rhytmically, the array is called systolic (referring to the way the heart beats)
 
-My code works for any arbitrary 3x3 matric multiplication. The result is outputted row by row for the user. It is done completely in verilog, from scratch. The test bench, which verifies and tests these results, is also in verilog. 
+I wanted to better understand parallel architectures, and decided to implement a systolic array -- from scratch, in verilog. It was a robust learning expereince in which I was able to better understand parallel computing. It also enabled me to better understand the details between how TPUs and GPUs are different. 
+
 
 There is one file, `block.v`, which describes the basic behaviour of a single processing element, and the other code describes putting together the array. 
 
