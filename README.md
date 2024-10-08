@@ -8,7 +8,6 @@ Because these cells are tightly coordinated and pipelines flow rhytmically, the 
 
 I wanted to better understand parallel architectures, and decided to implement a systolic array -- from scratch, in verilog. It was a robust learning expereince in which I was able to better understand parallel computing. It also enabled me to better understand the details between how TPUs and GPUs are different. 
 
-
 There is one file, `block.v`, which describes the basic behaviour of a single processing element, and the other code describes putting together the array. 
 
 # Other projetcs
