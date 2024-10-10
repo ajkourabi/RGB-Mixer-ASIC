@@ -12,6 +12,8 @@ This was composed of three parts
 
 My goal is to take this and make it into an ASIC, thus learning about the entire chip design process. 
 
+I already verified it using VHDL test benches, but plan to do a more complete job with something like coco_tb. 
+
 # **Systolic Array for Matrix Multiplication**. 
 
 A systolic array is a form of architecture in which nodes are tightly couples and networked in a way that allows for streamlined parallel computing. It is used in AI Chips like Google's TPU for matrix multiplication. 
