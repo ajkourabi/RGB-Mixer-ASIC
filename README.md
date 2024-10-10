@@ -1,4 +1,16 @@
-I am learning verilog. My goals is to explore the entire chip desing process, from writing the verilog code to doing the layout. Here are my projects so far:
+I am learning verilog. My goal is to explore the entire chip desing process from writing the verilog code to doing the layout. I started with writing verilog programs, like an ALU and a Systolic Array. My next goal is to take a program, like an RGB mixer, all the way through the chip design process. 
+
+Here are my projects so far:
+
+# **RGB Mixer**
+
+This was composed of three parts 
+
+1. PWM Driver, built from scratch 
+2. Digital Rotary Encoder, built from scratch 
+3. LED-Driver that combines these modules to power 3 LEDs. 
+
+My goal is to take this and make it into an ASIC, thus learning about the entire chip design process. 
 
 # **Systolic Array for Matrix Multiplication**. 
 
