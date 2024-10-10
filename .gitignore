@@ -1,8 +1,6 @@
 # Ignore compiled output
-*/project_root
-!*.png
+*/
 !*.ipynb
-!*.py
 !*.v
 !*.sv
 !*.vcd
