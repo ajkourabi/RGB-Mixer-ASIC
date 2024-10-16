@@ -1,8 +1,16 @@
 # Ignore compiled output
 */
-!*.ipynb
-!*.v
-!*.sv
-!*.vcd
-!*.md
-!.gitignore
+
+# Ignore __pycache__ directories
+__pycache__/
+
+# Ignore the specific gtkwave folder
+gtkwave-gtk3-3.3.120/
+
+# Keep the existing ignores
+*.ipynb
+*.v
+*.sv
+*.vcd
+*.md
+.gitignore
