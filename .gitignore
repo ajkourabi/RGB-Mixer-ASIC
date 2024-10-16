@@ -1,6 +1,3 @@
-# Ignore compiled output
-*/
-
 # Ignore __pycache__ directories
 __pycache__/
 
