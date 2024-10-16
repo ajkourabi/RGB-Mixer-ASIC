@@ -98,6 +98,10 @@ module led_driver_tb;
 
     #1000;
 
+    #20 rst = 1'b1;
+    #20 rst = 1'b0;
+
+    #1000;
     // End simulation
     #100 $finish;
   end
