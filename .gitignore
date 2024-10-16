@@ -5,8 +5,10 @@ __pycache__/
 gtkwave-gtk3-3.3.120/
 
 # Keep the existing ignores
-*.v
-*.sv
-*.vcd
-*.md
+!*.v
+!*.sv
+!*.md
+
+.ipynb
 .gitignore
+*.vcd
