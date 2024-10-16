@@ -1,3 +1,6 @@
+`include "rotary_encoder.sv"
+`include "pwm_driver.sv"
+
 module rgb_led_driver(
     input clk, rst,
     input blue_A, blue_B, red_A, red_B, green_A, green_B,
