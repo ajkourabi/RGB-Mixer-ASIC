@@ -4,11 +4,11 @@ __pycache__/
 # Ignore the specific gtkwave folder
 gtkwave-gtk3-3.3.120/
 
-# Keep the existing ignores
+
 !*.v
 !*.sv
 !*.md
 
-.ipynb
+*.ipynb
 .gitignore
 *.vcd
