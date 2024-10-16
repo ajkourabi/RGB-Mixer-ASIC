@@ -1,0 +1,12 @@
+# Ignore __pycache__ directories
+__pycache__/
+
+# Ignore the specific gtkwave folder
+gtkwave-gtk3-3.3.120/
+
+# Keep the existing ignores
+*.v
+*.sv
+*.vcd
+*.md
+.gitignore
