@@ -1,3 +1,28 @@
+# Goal 
+
+My goal was to design a chip from scratch. To achieve that, I had to learn about the process from the start, beginning with learning Verilog. After some sample projects, I designed an **RGB Mixer** in Verilog. Using OpenLane, I turned that into a chip. 
+
+I also completed several other smaller projects to get to creating this larger more involved project. 
+
+## Final Product 
+
+The final product is an **RGB LED Mixer ASIC**. I described the base functionality in Verilog, and using OpenLane's RTL to ASIC workflow, took the design through the chip desing process. The mixer is made of three parts: 
+
+1. PWM Driver, built from scratch 
+2. Digital Rotary Encoder, built from scratch 
+3. LED-Driver that combines these modules to power 3 LEDs. 
+
+> The flow of taking the Verilog code into a chip is completely outlined and annotated in a Jupyer Notebook I made. You can find it [here](chip design flow.ipynb). chip design flow.ipynb
+
+## Past Projects 
+
+
+
+
+
+
+
+
 I am learning verilog. My goal is to explore the entire chip desing process from writing the verilog code to doing the layout. I started with writing verilog programs, like an ALU and a Systolic Array. My next goal is to take a program, like an RGB mixer, all the way through the chip design process. 
 
 Here are my projects so far:
