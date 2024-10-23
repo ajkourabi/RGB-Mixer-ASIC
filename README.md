@@ -1,16 +1,16 @@
 # Project Introduction 
 
-I wanted to design a chip from scratch. I had no prior knowledge in the topic, so I started from scratch. Beginning with Verilog, I learned my way through HDL, RTL, computer architectures, and the entire chip design process. I started with some sample projects (e.g. implementing a Systolic Array) in Verilog and worked my way up to a robust project that I was happy with. 
+I wanted to design a chip from scratch. Beginning with Verilog, I learned my way through HDL, RTL, computer architectures, and the entire chip design process. I started with some sample projects (e.g. implementing a Systolic Array) in Verilog and worked my way up to a robust project that I was happy with. 
 
 ## Final Product 
 
-The final project is an **RGB LED Mixer ASIC**. I described the base functionality in Verilog, and using OpenLane's RTL to ASIC workflow, took the design through the chip desing process. The mixer is made of three parts: 
+The result is a **RGB LED Mixer ASIC**. I describe the base functionality in Verilog, and using OpenLane's RTL to ASIC workflow, took the design through the chip desing process. The mixer is made of three parts: 
 
 1. PWM Driver, built from scratch 
 2. Digital Rotary Encoder, built from scratch 
 3. LED-Driver that combines these modules to power 3 LEDs.
 
-I wrote the testbenches for each of these modules, and after verification, turned it into an ASIC! 
+I wrote the testbenches for each of these modules in verilog. These files are visible in the project file. After confirming correct functinoality, I started on OpenLane's workflow and turned the design into an ASIC. 
 
 > The chip design flow is showcased and annotated in a Jupyer Notebook I made. I describe and go through each step. You can find it [here](ooo).
 
@@ -21,7 +21,7 @@ The final chip looks like this!
 </p>
 
 
-Overall, I learned an incredible amount about chip design. This was the largest side project I have undertaken and I am happy with how it came out. 
+Overall, I learned an incredible amount about chip design. This was the largest side project I have undertaken and I am happy with how it came out. [Here](https://x.com/aj_kourabi/status/1848785595708887177) is a twitter thread going over my learnings from the chip design process in particular. 
 
 ## Past Projects 
  
