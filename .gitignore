@@ -9,6 +9,6 @@ gtkwave-gtk3-3.3.120/
 !*.sv
 !*.md
 
-*.ipynb
+!*.ipynb
 .gitignore
 *.vcd
