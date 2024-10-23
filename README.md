@@ -10,7 +10,7 @@ The result is a **RGB LED Mixer ASIC**. I describe the base functionality in Ver
 2. Digital Rotary Encoder, built from scratch 
 3. LED-Driver that combines these modules to power 3 LEDs.
 
-I wrote the testbenches for each of these modules in verilog. These files are visible in the project file. After confirming correct functinoality, I started on OpenLane's workflow and turned the design into an ASIC. 
+I wrote the testbenches for each of these modules in verilog. These files are visible in the [project file](RGB_Mixer). After confirming correct functinoality, I got started on OpenLane's workflow and turned the design into an ASIC. 
 
 > The chip design flow is showcased and annotated in a Jupyer Notebook I made. I describe and go through each step. You can find it [here](https://colab.research.google.com/drive/1cc1IAzJyq1mTwqI_kV7_VD_Q_9GUl906?usp=sharing). It is also available in this git repo [here](openlane_workflow.ipynb), though it may take a while to load. 
 
@@ -21,7 +21,7 @@ The final chip looks like this!
 </p>
 
 
-Overall, I learned an incredible amount about chip design. This was the largest side project I have undertaken and I am happy with how it came out. [Here](https://x.com/aj_kourabi/status/1848785595708887177) is a twitter thread where I broke down the chip design process.  
+Overall, I learned an incredible amount about chip design. This was the largest side project I have undertaken and I am happy with how it came out. [Here](https://x.com/aj_kourabi/status/1848785595708887177) is a twitter thread where I broke down the chip design process. 
 
 ## Past Projects 
  
