@@ -12,7 +12,7 @@ The result is a **RGB LED Mixer ASIC**. I describe the base functionality in Ver
 
 I wrote the testbenches for each of these modules in verilog. These files are visible in the project file. After confirming correct functinoality, I started on OpenLane's workflow and turned the design into an ASIC. 
 
-> The chip design flow is showcased and annotated in a Jupyer Notebook I made. I describe and go through each step. You can find it [here](https://colab.research.google.com/drive/1cc1IAzJyq1mTwqI_kV7_VD_Q_9GUl906?usp=sharing). It is also available in this git repo [here](openlane_workflow.ipynb), though it may take a while to load. 
+> The chip design flow is showcased and annotated in a Jupyer Notebook I made. I describe and go through each step. You can find it [here](https://colab.research.google.com/drive/1cc1IAzJyq1mTwqI_kV7_VD_Q_9GUl906?usp=sharing){:target="_blank"}. It is also available in this git repo [here](openlane_workflow.ipynb), though it may take a while to load. 
 
 The final chip looks like this! 
 
