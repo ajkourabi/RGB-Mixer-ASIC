@@ -21,7 +21,7 @@ The final chip looks like this!
 </p>
 
 
-Overall, I learned an incredible amount about chip design. This was the largest side project I have undertaken and I am happy with how it came out. [Here](https://x.com/aj_kourabi/status/1848785595708887177) is a twitter thread going over my learnings from the chip design process in particular. 
+Overall, I learned an incredible amount about chip design. This was the largest side project I have undertaken and I am happy with how it came out. [Here](https://x.com/aj_kourabi/status/1848785595708887177) is a twitter thread where I broke down the chip design process.  
 
 ## Past Projects 
  
