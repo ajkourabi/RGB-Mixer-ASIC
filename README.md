@@ -16,7 +16,9 @@ The final product is an **RGB LED Mixer ASIC**. I described the base functionali
 
 The final chip looks like this! 
 
-![GDS file of the chip](RGB_Mixer\image.png)
+<p align="center">
+  <img src="RGB_Mixer/image.png" alt="GDS File">
+</p>
 
 
 Overall, I learned an incredible amount about chip design. 
