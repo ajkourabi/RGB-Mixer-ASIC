@@ -1,18 +1,18 @@
-# Goal 
+# Project Introduction 
 
-My goal was to design a chip from scratch. To achieve that, I had to learn about the process from the start, beginning with learning Verilog. After some sample projects, I designed an **RGB Mixer** in Verilog. Using OpenLane, I turned that into a chip. 
-
-I also completed several other smaller projects to get to creating this larger more involved project. 
+I wanted to design a chip from scratch. I had no prior knowledge in the topic, so I started from scratch. Beginning with Verilog, I learned my way through HDL, RTL, computer architectures, and the entire chip design process. I started with some sample projects (e.g. implementing a Systolic Array) in Verilog and worked my way up to a robust project that I was happy with. 
 
 ## Final Product 
 
-The final product is an **RGB LED Mixer ASIC**. I described the base functionality in Verilog, and using OpenLane's RTL to ASIC workflow, took the design through the chip desing process. The mixer is made of three parts: 
+The final project is an **RGB LED Mixer ASIC**. I described the base functionality in Verilog, and using OpenLane's RTL to ASIC workflow, took the design through the chip desing process. The mixer is made of three parts: 
 
 1. PWM Driver, built from scratch 
 2. Digital Rotary Encoder, built from scratch 
-3. LED-Driver that combines these modules to power 3 LEDs. 
+3. LED-Driver that combines these modules to power 3 LEDs.
 
-> The flow of taking the Verilog code into an ASIC is completely outlined and annotated in a Jupyer Notebook I made. I describe and go through each step. You can find it [here](ooo).
+I wrote the testbenches for each of these modules, and after verification, turned it into an ASIC! 
+
+> The chip design flow is showcased and annotated in a Jupyer Notebook I made. I describe and go through each step. You can find it [here](ooo).
 
 The final chip looks like this! 
 
@@ -21,7 +21,7 @@ The final chip looks like this!
 </p>
 
 
-Overall, I learned an incredible amount about chip design. 
+Overall, I learned an incredible amount about chip design. This was the largest side project I have undertaken and I am happy with how it came out. 
 
 ## Past Projects 
  
